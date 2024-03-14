@@ -1,4 +1,4 @@
-import { useCartStore } from "../store/CartStore";
+import { useCartStore } from "../store/useCartStore";
 import { formatter } from "../utils/useFormatter";
 
 export default function Cart() {
@@ -12,7 +12,7 @@ export default function Cart() {
   );
 
   return (
-    <section className="flex-1 my-4 border p-3">
+    <section className="flex-1 my-4 border p-3 max-w-2xl h-full">
       <h2 className="text-6xl text-fuchsia-900 font-bold my-2">Cart</h2>
       <ul className="flex flex-col gap-2 px-2 py-5">
         {items.map((item) => (
