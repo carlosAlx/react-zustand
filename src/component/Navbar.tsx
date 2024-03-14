@@ -1,6 +1,6 @@
 export default function Navbar() {
   return (
-    <nav className="w-full border-b p-3 shadow-md sticky mb-5">
+    <nav className="w-full border-b p-3 shadow-md sticky top-0 z-10 mb-5 bg-white">
       <main className="w-11/12 mx-auto">
         <ul className="flex justify-around">
           <li className="text-lg text-blue-800 font-semibold">React</li>
