@@ -3,6 +3,7 @@ export const initialItems = [
       id: "p1",
       name: "Wireless Bluetooth Earbuds",
       price: 49.99,
+
     },
     {
       id: "p2",

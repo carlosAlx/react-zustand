@@ -1,4 +1,5 @@
 import { useCartStore } from "../store/CartStore";
+import { formatter } from "../utils/useFormatter";
 
 export default function AvailableProducts() {
   const [items, addItemToCart] = useCartStore((state) => [
@@ -13,7 +14,7 @@ export default function AvailableProducts() {
           <li className="flex justify-between items-center border-solid border-cyan-500 border p-3 m-0">
             <div className="flex flex-col">
               <span>{item.name}</span>
-              <span>{item.price}</span>
+              <span>{formatter.format(item.price)}</span>
             </div>
 
             <button
