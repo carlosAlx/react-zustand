@@ -7,14 +7,17 @@ export default function AvailableProducts() {
     state.addItemToCart,
   ]);
   return (
-    <div className="w-3/5 m-auto my-4">
+    <section className="w-3/5 m-auto my-4 border p-2">
       <h2 className="text-6xl text-fuchsia-900 font-bold my-2">Products</h2>
-      <ul className="grid grid-cols-3 gap-2 rounded-md border-solid border border-yellow-300 px-2 py-5">
+      <ul className="grid grid-cols-2 gap-3 rounded-md px-2 py-5">
         {items.map((item) => (
-          <li className="flex justify-between items-center border-solid border-cyan-500 border p-3 m-0">
+          <li className="flex justify-between items-center border-solid border-cyan-500 border p-3 hover:scale-105 transition-all duration-500">
+            <picture className="w-36">
+              <img className="w-full rounded-lg" src={item.image} alt="" />
+            </picture>
             <div className="flex flex-col">
               <span>{item.name}</span>
-              <span>{formatter.format(item.price)}</span>
+              <span>{formatter.format(+item.price)}</span>
             </div>
 
             <button
@@ -26,6 +29,6 @@ export default function AvailableProducts() {
           </li>
         ))}
       </ul>
-    </div>
+    </section>
   );
 }

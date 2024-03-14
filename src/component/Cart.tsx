@@ -12,16 +12,19 @@ export default function Cart() {
   );
 
   return (
-    <div className="flex-1 my-4">
+    <section className="flex-1 my-4 border p-3">
       <h2 className="text-6xl text-fuchsia-900 font-bold my-2">Cart</h2>
       <ul className="flex flex-col gap-2 px-2 py-5">
         {items.map((item) => (
           <li className="flex justify-between items-center border-solid border-cyan-500 border p-3 m-0">
+            <picture className="w-36 m-0 border-solid border-red-900 border">
+              <img className="w-full" src={item.image} alt="" />
+            </picture>
             <div className="flex flex-col">
               <span>
                 {item.name} -qtd: {item.qt}
               </span>
-              <span>{formatter.format(item.price)}</span>
+              <span>{formatter.format(+item.price)}</span>
             </div>
 
             <button
@@ -37,6 +40,6 @@ export default function Cart() {
         <span>Quantity:{totalItemCart}</span>
         <span>Total:{formatter.format(totalPriceCart)}</span>
       </div>
-    </div>
+    </section>
   );
 }
